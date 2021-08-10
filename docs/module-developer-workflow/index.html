@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Developer workflow · ScaleDynamics computing platform documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Our SDK provides a set of commands to create, run and deploy a Node.js module. To access the module running on the emulator or after being deployed on a cloud from a Browser, a Node.js script or another deployed Node.js module, you need to use a client module. The client provides a transparent access to your Node.js module exported functions over http."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Developer workflow · ScaleDynamics computing platform documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.scaledynamics.com/"/><meta property="og:description" content="Our SDK provides a set of commands to create, run and deploy a Node.js module. To access the module running on the emulator or after being deployed on a cloud from a Browser, a Node.js script or another deployed Node.js module, you need to use a client module. The client provides a transparent access to your Node.js module exported functions over http."/><meta property="og:image" content="https://docs.scaledynamics.com/img/sd-docs-social.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.scaledynamics.com/img/sd-docs-social-square.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-117302076-5', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/google-tag-manager.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/sync-tab-selector.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/scaleDynamics.logo.png" alt="ScaleDynamics computing platform documentation"/><h2 class="headerTitleWithLogo">ScaleDynamics computing platform documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Hosting Node.js module</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Platform</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/">Multi-cloud managed platform for Node.js</a></li><li class="navListItem"><a class="navItem" href="/docs/platform-module-as-a-service">Module-as-a-Service</a></li><li class="navListItem"><a class="navItem" href="/docs/platform-features">Features</a></li><li class="navListItem"><a class="navItem" href="/docs/platform-dev-tools">Developer Tools</a></li><li class="navListItem"><a class="navItem" href="/docs/platform-templates">Ready to use templates</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Hosting Node.js module</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/module-getting-started">Getting started</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/module-developer-workflow">Developer workflow</a></li><li class="navListItem"><a class="navItem" href="/docs/module-typescript">TypeScript support</a></li><li class="navListItem"><a class="navItem" href="/docs/module-development">Develop your modules</a></li><li class="navListItem"><a class="navItem" href="/docs/module-deploy">Deploy a Node.js module</a></li><li class="navListItem"><a class="navItem" href="/docs/module-use-in-nodejs">Use it from Node.js</a></li><li class="navListItem"><a class="navItem" href="/docs/module-use-in-browser-html">Use it from browser using HTML</a></li><li class="navListItem"><a class="navItem" href="/docs/module-use-in-browser-builder">Use it from browser using a script</a></li><li class="navListItem"><a class="navItem" href="/docs/module-use-in-frameworks">Use it from web frameworks</a></li><li class="navListItem"><a class="navItem" href="/docs/module-logs">Get module execution logs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Hosting Node.js HTTP server</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/http-server-getting-started">Getting started</a></li><li class="navListItem"><a class="navItem" href="/docs/http-server-deploy">Deploy a Node.js HTTP server</a></li><li class="navListItem"><a class="navItem" href="/docs/http-server-domains">Use custom domains</a></li><li class="navListItem"><a class="navItem" href="/docs/http-server-logs">Get server execution logs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Hosting static assets</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/static-getting-started">Getting started</a></li><li class="navListItem"><a class="navItem" href="/docs/static-deploy">Deploy static public assets</a></li><li class="navListItem"><a class="navItem" href="/docs/static-domains">Use custom domains</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Project SDK</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/sdk-introduction">SDK introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/sdk-installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/sdk-glossary">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/api/requirements">Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/api/cli">SDK CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/api/warp-config">Configuration file</a></li><li class="navListItem"><a class="navItem" href="/docs/api/variables">Environment variables</a></li><li class="navListItem"><a class="navItem" href="/docs/api/engine">Engine</a></li><li class="navListItem"><a class="navItem" href="/docs/api/format">Client module formats</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Developer workflow</h1></header><article><div><span><p>Our SDK provides a set of commands to create, run and deploy a Node.js module. To access the module running on the emulator or after being deployed on a cloud from a Browser, a Node.js script or another deployed Node.js module, you need to use a client module. The client provides a transparent access to your Node.js module exported functions over http.</p>
+<p>There are 4 main commands: <code>warp build</code>,  <code>warp emulator</code>, <code>warp dev</code>, and <code>warp deploy</code>.</p>
+<p><code>warp build</code> prepares your Node.js module to be emulated or deployed and generates the client you can import in your browser or from a Node.js script/module.</p>
+<p><img src="../../img/imagesdoc/module-build.png" alt="building" width="500" /></p>
+<p>After being built, <code>warp emulator run</code> starts a module emulation so you can run the module on your computer to test or use it locally.
+<img src="../../img/imagesdoc/module-emulatorrun.png" alt="emulator run" width="180" /></p>
+<blockquote>
+<p>Note that using <code>warp build</code> and <code>warp emulator</code> commands you can create the CI workflow you need to test your modules before deployment.</p>
+</blockquote>
+<p>To enter a development session with live reload use <code>warp dev</code> that builds and starts an emulator, and at each change of your module code it rebuilds the client and updates the emulator.</p>
+<p><img src="../../img/imagesdoc/module-dev.png" alt="dev session" width="500"/></p>
+<p>When you're ready to deploy, build your module and use <code>warp deploy</code> to deploy your module on a cloud execution environment. You can also deploy your static assets.
+Static assets and your modules are deployed in two HTTP servers.</p>
+<p><img src="../../img/imagesdoc/module-deploy.png" alt="deploying" width="350" /></p>
+<blockquote>
+<p>Note that using <code>warp build</code> and <code>warp deploy</code> commands you can create the CD workflow you need to deploy your modules.</p>
+</blockquote>
+<p>To get all other available commands you can use <code>warp help</code>. Please refer to the <a href="api/cli">command line documentation</a> for details and supported options.</p>
+<p>We also provide documentation on how to import it</p>
+<ul>
+<li><a href="/docs/module-use-in-nodejs">In a Node.js script</a></li>
+<li><a href="/docs/module-use-in-browser-html">In a browser using HTML</a></li>
+<li><a href="/docs/module-use-in-browser-builder">In a browser using a builder</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/module-getting-started"><span class="arrow-prev">← </span><span>Getting started</span></a><a class="docs-next button" href="/docs/module-typescript"><span class="function-name-prevnext">TypeScript support</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/scaleDynamics.logo.png" alt="ScaleDynamics computing platform documentation" height="32"/></a><div><h5>Docs</h5><a href="/docs/.">Getting Started</a><a href="/docs/api/requirements">API Reference</a></div><div><h5>ScaleDynamics</h5><a href="https://scaledynamics.com" target="_blank" rel="noopener">Website</a><a href="https://twitter.com/scaledyndev" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.linkedin.com/company/scaledynamics" target="_blank" rel="noreferrer noopener">LinkedIn</a></div><div><h5>More</h5><a href="https://www.npmjs.com/package/warp" target="_blank" rel="noreferrer noopener">npm</a><a href="https://github.com/ScaleDynamics" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://scaledynamics.com/about" target="_blank" rel="noopener">About Us</a></div></section><section class="copyright">© ScaleDynamics - 2021</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '233107f0570beb34471275f8374a1655',
+                indexName: 'warpjs',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
