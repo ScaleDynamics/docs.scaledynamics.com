@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Module-as-a-Service · ScaleDynamics computing platform documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="ScaleDynamics is the first cloud platform providing a managed Node.js module service. It is the most advanced and simple way to create microservices or backends in the cloud, it also opens new cloud management features."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Module-as-a-Service · ScaleDynamics computing platform documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.scaledynamics.com/"/><meta property="og:description" content="ScaleDynamics is the first cloud platform providing a managed Node.js module service. It is the most advanced and simple way to create microservices or backends in the cloud, it also opens new cloud management features."/><meta property="og:image" content="https://docs.scaledynamics.com/img/sd-docs-social.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.scaledynamics.com/img/sd-docs-social-square.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-117302076-5', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="/js/google-tag-manager.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/sync-tab-selector.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/scaleDynamics.logo.png" alt="ScaleDynamics computing platform documentation"/><h2 class="headerTitleWithLogo">ScaleDynamics computing platform documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Managed Node.js module</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">ScaleDynamics</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/">Managed Platform</a></li><li class="navListItem"><a class="navItem" href="/docs/platform-features">Features</a></li><li class="navListItem"><a class="navItem" href="/docs/platform-dev-tools">Developer Tools</a></li><li class="navListItem"><a class="navItem" href="/docs/platform-templates">Ready to use templates</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Managed Node.js module</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/module-as-a-service">Module-as-a-Service</a></li><li class="navListItem"><a class="navItem" href="/docs/module-getting-started">Getting started</a></li><li class="navListItem"><a class="navItem" href="/docs/module-developer-workflow">Developer workflow</a></li><li class="navListItem"><a class="navItem" href="/docs/module-typescript">TypeScript support</a></li><li class="navListItem"><a class="navItem" href="/docs/module-development">Develop your modules</a></li><li class="navListItem"><a class="navItem" href="/docs/module-deploy">Deploy a module</a></li><li class="navListItem"><a class="navItem" href="/docs/module-logs">Get module execution logs</a></li><li class="navListItem"><a class="navItem" href="/docs/module-call-from-nodejs">Call from Node.js</a></li><li class="navListItem"><a class="navItem" href="/docs/module-call-from-browser-html">Call from browser using HTML</a></li><li class="navListItem"><a class="navItem" href="/docs/module-call-from-browser-builder">Call from browser using a script</a></li><li class="navListItem"><a class="navItem" href="/docs/module-integrates-in-frameworks">Frontend frameworks integration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Managed Node.js server</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/http-server-getting-started">Getting started</a></li><li class="navListItem"><a class="navItem" href="/docs/http-server-deploy">Deploy a Node.js HTTP server</a></li><li class="navListItem"><a class="navItem" href="/docs/http-server-domains">Use custom domains</a></li><li class="navListItem"><a class="navItem" href="/docs/http-server-logs">Get server execution logs</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Static asset hosting</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/static-getting-started">Getting started</a></li><li class="navListItem"><a class="navItem" href="/docs/static-deploy">Deploy static public assets</a></li><li class="navListItem"><a class="navItem" href="/docs/static-domains">Use custom domains</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Project SDK</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/sdk-installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/sdk-glossary">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/api/requirements">Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/api/cli">SDK CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/api/warp-config">Configuration file</a></li><li class="navListItem"><a class="navItem" href="/docs/api/variables">Environment variables</a></li><li class="navListItem"><a class="navItem" href="/docs/api/engine">Engine</a></li><li class="navListItem"><a class="navItem" href="/docs/api/format">Client module formats</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Module-as-a-Service</h1></header><article><div><span><p>ScaleDynamics is the first cloud platform providing a managed Node.js module service. It is the most advanced and simple way to create microservices or backends in the cloud, it also opens new cloud management features.</p>
+<p>The principle is simple: create a standard Node.js module, deploy it and call its exported functions in JavaScript or TypeScript with tradional function calls. No need to learn, use, configure, or route HTTP, all is managed for you.</p>
+<p><i>When you say I call my module, what does that mean?</i></p>
+<p>It means that instead of doing an http call from your JavaScript browser or Node.js to call your hosted module, you import the module like any other module and you call its exported JavaScript/TypeScript functions using objects. No need to learn, use, configure, route HTTP, behind the scene our compiler does all that for you, from advanced JS object serialization, integrity checks, try/catch forwards, http layer management...</p>
+<p><i>Seems awesome! Want an example?</i></p>
+<p>For example the module below exports a <code>hello</code> function.</p>
+<p><img width=450 src="../../img/imagesdoc/be-w-w.png" alt="module as a service code"  /></p>
+<p>After build we generate a client module that can be imported on the client side (browser, Node.js, node-red... like a standard module, so you can call the <code>hello</code>function like a standard function.</p>
+<p><img width=450 src="../../img/imagesdoc/client-w-w.png" alt="call a module as a service"  /></p>
+<p>Deploy the module and your clients will call the hosted module. That's it!</p>
+<p><i>What do you mean by client module?</i></p>
+<p>You can see the client module like a driver to access your own hosted module. For example to access mongodb from Node.js you use the mongodb driver module (you don't manage http calls behind the scene). Similarly, to access your own hosted module, you use the client module.</p>
+<p>Our tools automatically generate the client module to access your hosted module functions, nothing to code on your side.</p>
+<p><i>Do I have all the tools I need to start coding this way?</i></p>
+<p>Yes, we provide all you need to code, deploy and manage the run of your modules - have a look to our <a href="/docs/platform-dev-tools">dev tools page</a>.</p>
+<p><i>Looking for some use cases?</i></p>
+<ul>
+<li>module is only accessed from a JavaScript client (browser, Node.js script, Node.js server or function),</li>
+<li>want to keep your microservice private not accessible from HTTP?</li>
+<li>want to develop a backend specific to a browser frontend?</li>
+<li>want to develop super fast without http learning, configuration, coding?</li>
+<li>want to access advanced cloud management features of the platform?</li>
+<li>want to expose your module on npm, or within your team so any other JS developer can use your microservice?</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="time-to-get-started"></a><a href="#time-to-get-started" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Time to get started</h2>
+<ul>
+<li><a href="/docs/module-getting-started">Deploy your first Managed Node.js module in less than 2 minutes</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/platform-templates"><span class="arrow-prev">← </span><span>Ready to use templates</span></a><a class="docs-next button" href="/docs/module-getting-started"><span>Getting started</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#time-to-get-started">Time to get started</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/scaleDynamics.logo.png" alt="ScaleDynamics computing platform documentation" height="32"/></a><div><h5>Docs</h5><a href="/docs/platform-module-as-a-service">Module-as-a-Service</a><a href="/docs/module-getting-started">Getting Started</a><a href="/docs/sdk-introduction">SDK</a></div><div><h5>ScaleDynamics</h5><a href="https://scaledynamics.com" target="_blank" rel="noopener">Website</a><a href="https://twitter.com/scaledynamics" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.linkedin.com/company/scaledynamics" target="_blank" rel="noreferrer noopener">LinkedIn</a></div><div><h5>More</h5><a href="https://www.npmjs.com/package/warp" target="_blank" rel="noreferrer noopener">npm</a><a href="https://github.com/ScaleDynamics" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://scaledynamics.com/about" target="_blank" rel="noopener">About Us</a></div></section><section class="copyright">© ScaleDynamics - 2021</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '233107f0570beb34471275f8374a1655',
+                indexName: 'warpjs',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
