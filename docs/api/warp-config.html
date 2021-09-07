@@ -73,7 +73,7 @@
 </code></pre>
 <p>serverDir: the root of your project</p>
 <p>arguments: config arguments passed to the <a href="cli">CLI</a></p>
-<p>environment: the environment you're deploying in</p>
+<p>environment: the environment you are deploying in</p>
 <p>The objects exported by the configuration must be either a module config, a hosting config or a server config.</p>
 <h2><a class="anchor" aria-hidden="true" id="module-config"></a><a href="#module-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Module config</h2>
 <p>If there is no module configuration and no <code>scripts.start</code> attribute but a <code>main</code> attribute in your <code>package.json</code>, a default module configuration will be generated.</p>
@@ -84,15 +84,20 @@
   <span class="hljs-attr">output</span>: {
     <span class="hljs-attr">format</span>: <span class="hljs-string">"umd"</span>,
     <span class="hljs-attr">filePath</span>: <span class="hljs-string">"../client/src/functions.js"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"outputname"</span>,
   },
   <span class="hljs-attr">env</span>: <span class="hljs-string">"auto"</span>,
   <span class="hljs-attr">engine</span>: {
     <span class="hljs-attr">url</span>: <span class="hljs-string">"https://cdn.scaledynamics.com/warp-engine"</span>,
   },
-  <span class="hljs-attr">variables</span>: 
-  emulator: {
-    <span class="hljs-attr">variables</span>:
-    host: <span class="hljs-string">"localhost"</span>,
+  <span class="hljs-attr">variables</span>: {
+    <span class="hljs-attr">key</span>: <span class="hljs-string">"value"</span>,
+  },
+  <span class="hljs-attr">emulator</span>: {
+    <span class="hljs-attr">variables</span>: {
+      <span class="hljs-attr">key</span>: <span class="hljs-string">"value"</span>,
+    },
+    <span class="hljs-attr">host</span>: <span class="hljs-string">"localhost"</span>,
     <span class="hljs-attr">port</span>: <span class="hljs-number">3192</span>,
     <span class="hljs-attr">loggingLevel</span>: <span class="hljs-string">"info"</span>,
   },
@@ -102,7 +107,9 @@
     <span class="hljs-attr">engine</span>: {
       <span class="hljs-attr">node</span>: <span class="hljs-number">12</span>,
     },
-    <span class="hljs-attr">variables</span>:
+    <span class="hljs-attr">variables</span>: {
+      <span class="hljs-attr">key</span>: <span class="hljs-string">"value"</span>,
+    },
   }
 };
 </code></pre>
@@ -114,19 +121,16 @@
 <p>The entry point to expose an API to the client. It can either be a path to a JavaScript file or an object with 'source' and 'type' as attribute. Source being a path to a JavaScript file, and type the path to a TypeScript declaration file.</p>
 <p>This TypeScript declaration file can import any other TypeScript declaration file.</p>
 <h4><a class="anchor" aria-hidden="true" id="output"></a><a href="#output" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>output</h4>
+<p>Can be an array of outputs.</p>
+<h5><a class="anchor" aria-hidden="true" id="formatoutput"></a><a href="#formatoutput" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>format.output</h5>
 <p>See <a href="/docs/api/format">format</a>.</p>
-<p><code>umd</code></p>
-<pre><code class="hljs"><span class="hljs-selector-tag">output</span>: {
-  <span class="hljs-attribute">format</span>: <span class="hljs-string">"umd"</span>,
-  filePath: <span class="hljs-string">"../client/src/functions.js"</span>,
-},
-</code></pre>
-<p><code>node-module</code></p>
-<pre><code class="hljs"><span class="hljs-selector-tag">output</span>: {
-  <span class="hljs-attribute">format</span>: <span class="hljs-string">"node-module"</span>,
-  projectPath: <span class="hljs-string">"../client"</span>,
-},
-</code></pre>
+<h5><a class="anchor" aria-hidden="true" id="formatname"></a><a href="#formatname" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>format.name</h5>
+<p>The name under which your client will be generated. This defines under which name you will import it, for example, if it is a node-module you will use <code>require([format.name]);</code>.</p>
+<p>Default: <code>[module]-client</code> with [module] being the value of the module attribute.</p>
+<h5><a class="anchor" aria-hidden="true" id="formatfilepath"></a><a href="#formatfilepath" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>format.filePath</h5>
+<p>Only for <code>umd</code> format.</p>
+<h5><a class="anchor" aria-hidden="true" id="formatprojectpath"></a><a href="#formatprojectpath" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>format.projectPath</h5>
+<p>Only for <code>node-modules</code> format. This path has to be the target directory containing the <code>node_modules</code> directory.</p>
 <h4><a class="anchor" aria-hidden="true" id="env"></a><a href="#env" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>env</h4>
 <p>The default environment used by the client.</p>
 <p>Possible values:</p>
