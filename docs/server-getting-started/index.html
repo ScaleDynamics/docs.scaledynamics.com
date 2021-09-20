@@ -78,7 +78,7 @@
   <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
   <span class="hljs-attr">"main"</span>: <span class="hljs-string">"index.js"</span>,
   <span class="hljs-attr">"scripts"</span>: {
-    <span class="hljs-attr">"start"</span>: <span class="hljs-string">"node index.js"</span>
+    <span class="hljs-attr">"start"</span>: <span class="hljs-string">"node ."</span>
   }
 }
 </code></pre>
@@ -91,10 +91,10 @@
 
 <span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);
 <span class="hljs-keyword">const</span> app = express();
-<span class="hljs-keyword">const</span> port = process.env.WARP_PORT ? process.env.WARP_PORT : <span class="hljs-number">3000</span>
+<span class="hljs-keyword">const</span> port = process.env.WARP_PORT ? process.env.WARP_PORT : <span class="hljs-number">3000</span>;
 
 app.get(<span class="hljs-string">'/'</span>, (req, res) =&gt; {
-  res.send(<span class="hljs-string">`Hello world from Node.js <span class="hljs-subst">${process.version}</span>`</span>)
+  res.send(<span class="hljs-string">`Hello world from Node.js <span class="hljs-subst">${process.version}</span>`</span>);
 });
 
 app.listen(port, () =&gt; {
@@ -110,7 +110,7 @@ app.listen(port, () =&gt; {
 Look at <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a> to install it.</p>
 </blockquote>
 <p>Install the SDK to access all CLI commands:</p>
-<pre><code class="hljs css language-sh">npm install warp
+<pre><code class="hljs css language-sh">npm install warp --save-dev
 </code></pre>
 <p>To access our CLI, use <code>npx warp</code>. You can have the list of available commands and help with</p>
 <pre><code class="hljs css language-sh">npx warp <span class="hljs-built_in">help</span>
@@ -148,12 +148,12 @@ npx warp env select demo
 <p>After deployment the url to use to call your module is dumped on the terminal.</p>
 <blockquote>
 <p>if you want to know the deployment url, you can access the console or use the following command to get it:</p>
-<pre><code class="hljs css language-bash">npx warp env info
+<pre><code class="hljs css language-sh">npx warp env info
 </code></pre>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="8-call-the-server"></a><a href="#8-call-the-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. Call the server</h2>
 <p>Now the server is deployed, let's call it from http using curl for example:</p>
-<pre><code class="hljs css language-bash">curl https://DEPLOYMENT_URL
+<pre><code class="hljs css language-sh">curl https://DEPLOYMENT_URL
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="chapeau"></a><a href="#chapeau" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Chapeau!</h2>
 <p>Congrats', you deployed your first managed Node.js server. Want to continue?</p>
