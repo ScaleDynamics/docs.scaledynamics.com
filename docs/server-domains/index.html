@@ -63,23 +63,25 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Use custom domains</h1></header><article><div><span><p>The platform provides you test urls running on scaledynamics.site, or scaledynamics.cloud.</p>
-<p>You can easily connect your custom domains to make your http module live at <code>api.mycie.com</code> for example.</p>
+<p>You can easily connect your custom domains to make your http module live at <code>api.yourcompany.com</code> for example.</p>
 <h2><a class="anchor" aria-hidden="true" id="1-create-a-new-deployment-environment"></a><a href="#1-create-a-new-deployment-environment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Create a new deployment environment</h2>
-<p>Before deploying, you need to select a project and then create a new deployment environment and use it.</p>
-<p>For example let's create a <code>prod</code> env, you can use the environment name you want.</p>
-<p>In your asset directory:</p>
+<p>Before deploying, you need to create a new deployment environment, and start using it. You need to have selected a project before.</p>
+<p>For example, let's create a <code>prod</code> env (use the name you want).</p>
+<p>In your server directory:</p>
 <pre><code class="hljs css language-bash">npx warp env create prod
 npx warp env select prod
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="2-assign-your-custom-domain-for-deployment"></a><a href="#2-assign-your-custom-domain-for-deployment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Assign your custom domain for deployment</h2>
-<p>Then we will connect the url of your deployment to that environment. In our case we want to use <code>api.mycie.com</code></p>
-<pre><code class="hljs css language-bash">npx warp env base-url add server api.mycie.com
+<p>Then we will connect the url of your deployment to that environment. In our case we want to use <code>api.yourcompany.com</code></p>
+<pre><code class="hljs css language-bash">npx warp env base-url add server api.yourcompany.com
 </code></pre>
 <p>The command will dump something like that</p>
 <pre><code class="hljs css language-bash">Base URL ID <span class="hljs-string">'server'</span> with hostname <span class="hljs-string">'api.yourcompany.com'</span> added.
-Please deploy a DNS CNAME record under the name <span class="hljs-string">'api.yourcompany.com'</span> with value <span class="hljs-string">'xxxxxxxxxxxxx.scaledynamics.site.'</span> before deploying
+Please deploy:
+  - a DNS CNAME record under the name <span class="hljs-string">'xxxxx.api.yourcompany.com'</span> with value <span class="hljs-string">'api.yourcompany.com.scaledynamics.link.'</span> before deploying
+  - a DNS CNAME record under the name <span class="hljs-string">'api.yourcompany.com'</span> with value <span class="hljs-string">'xxxxx.scaledynamics.site.'</span> when you want your URL live
 </code></pre>
-<p>Follow the guideline and add a DNS CNAME record with the value provided.</p>
+<p>Follow the guideline and add those two DNS CNAME records with the value provided in your domain name provider's DNS configuration.</p>
 <h2><a class="anchor" aria-hidden="true" id="3-deploy"></a><a href="#3-deploy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. deploy</h2>
 <p>Now you can deploy as usual.</p>
 <pre><code class="hljs css language-bash">npx warp deploy
