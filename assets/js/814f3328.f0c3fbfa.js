@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"CI/CD with a simple NestJS server","permalink":"/blog/nest-github-actions"},{"title":"Deploy a Next.js SSR application","permalink":"/blog/next-js-ssr"}]}')}}]);
