@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3642],{5166:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/scale-dynamics","name":"ScaleDynamics","count":2,"permalink":"/blog/tags/scale-dynamics"}')}}]);
