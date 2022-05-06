@@ -4,22 +4,9 @@
         <title>ScaleDynamics platform documentation Blog</title>
         <link>https://docs.scaledynamics.com/blog</link>
         <description>ScaleDynamics platform documentation Blog</description>
-        <lastBuildDate>Wed, 20 Apr 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 14 Apr 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
-        <item>
-            <title><![CDATA[Build a Jamstack website (from scratch) with Contentful and (Svelte / NuxtJS 3)]]></title>
-            <link>https://docs.scaledynamics.com/blog/contentful-headless-cms</link>
-            <guid>contentful-headless-cms</guid>
-            <pubDate>Wed, 20 Apr 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[What is Jamstack]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="what-is-jamstack">What is Jamstack<a class="hash-link" href="#what-is-jamstack" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="what-is-a-headless-cms">What is a Headless CMS?<a class="hash-link" href="#what-is-a-headless-cms" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="architecture">Architecture<a class="hash-link" href="#architecture" title="Direct link to heading">​</a></h2><p>(schema with each bricks)</p><h3 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="contentful">contentful<a class="hash-link" href="#contentful" title="Direct link to heading">​</a></h3><blockquote><p>More than a headless CMS, Contentful is the API-first content management platform to create, manage and publish content on any digital channel.</p></blockquote><h3 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="vite--framework---solidjs-astro-nuxt-3">vite + framework ???  (SolidJS, Astro, Nuxt 3)<a class="hash-link" href="#vite--framework---solidjs-astro-nuxt-3" title="Direct link to heading">​</a></h3><h3 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="tailwind">tailwind<a class="hash-link" href="#tailwind" title="Direct link to heading">​</a></h3><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="contentful-in-action">Contentful in action<a class="hash-link" href="#contentful-in-action" title="Direct link to heading">​</a></h2><p>create first content</p><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="create-the-frontend">Create the frontend<a class="hash-link" href="#create-the-frontend" title="Direct link to heading">​</a></h2><p>init the web app</p><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="test--run">Test &amp; Run<a class="hash-link" href="#test--run" title="Direct link to heading">​</a></h2><p>vite on localhost</p><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="deploy-on-cloud">Deploy on Cloud<a class="hash-link" href="#deploy-on-cloud" title="Direct link to heading">​</a></h2><p>npw warp deploy</p>]]></content:encoded>
-            <category>Jamstack</category>
-            <category>CMS</category>
-            <category>(framework)</category>
-            <category>cloud</category>
-            <category>deploy</category>
-        </item>
         <item>
             <title><![CDATA[Make a simple Fastify API with TypeScript and deploy it]]></title>
             <link>https://docs.scaledynamics.com/blog/fastify-typescript-api</link>
