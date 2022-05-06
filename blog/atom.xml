@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.scaledynamics.com/blog</id>
     <title>ScaleDynamics platform documentation Blog</title>
-    <updated>2022-04-14T00:00:00.000Z</updated>
+    <updated>2022-04-20T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.scaledynamics.com/blog"/>
     <subtitle>ScaleDynamics platform documentation Blog</subtitle>
     <icon>https://docs.scaledynamics.com/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Build a Jamstack website (from scratch) with Contentful and (Svelte / NuxtJS 3)]]></title>
+        <id>contentful-headless-cms</id>
+        <link href="https://docs.scaledynamics.com/blog/contentful-headless-cms"/>
+        <updated>2022-04-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[What is Jamstack]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="what-is-jamstack">What is Jamstack<a class="hash-link" href="#what-is-jamstack" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="what-is-a-headless-cms">What is a Headless CMS?<a class="hash-link" href="#what-is-a-headless-cms" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="architecture">Architecture<a class="hash-link" href="#architecture" title="Direct link to heading">​</a></h2><p>(schema with each bricks)</p><h3 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="contentful">contentful<a class="hash-link" href="#contentful" title="Direct link to heading">​</a></h3><blockquote><p>More than a headless CMS, Contentful is the API-first content management platform to create, manage and publish content on any digital channel.</p></blockquote><h3 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="vite--framework---solidjs-astro-nuxt-3">vite + framework ???  (SolidJS, Astro, Nuxt 3)<a class="hash-link" href="#vite--framework---solidjs-astro-nuxt-3" title="Direct link to heading">​</a></h3><h3 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="tailwind">tailwind<a class="hash-link" href="#tailwind" title="Direct link to heading">​</a></h3><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="contentful-in-action">Contentful in action<a class="hash-link" href="#contentful-in-action" title="Direct link to heading">​</a></h2><p>create first content</p><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="create-the-frontend">Create the frontend<a class="hash-link" href="#create-the-frontend" title="Direct link to heading">​</a></h2><p>init the web app</p><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="test--run">Test &amp; Run<a class="hash-link" href="#test--run" title="Direct link to heading">​</a></h2><p>vite on localhost</p><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="deploy-on-cloud">Deploy on Cloud<a class="hash-link" href="#deploy-on-cloud" title="Direct link to heading">​</a></h2><p>npw warp deploy</p>]]></content>
+        <author>
+            <name>Nicolas Pennec</name>
+        </author>
+        <category label="Jamstack" term="Jamstack"/>
+        <category label="CMS" term="CMS"/>
+        <category label="(framework)" term="(framework)"/>
+        <category label="cloud" term="cloud"/>
+        <category label="deploy" term="deploy"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Make a simple Fastify API with TypeScript and deploy it]]></title>
         <id>fastify-typescript-api</id>
