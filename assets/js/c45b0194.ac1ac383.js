@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[436],{15433:e=>{e.exports=JSON.parse('{"label":"Drupal","permalink":"/blog/tags/drupal","allTagsPath":"/blog/tags","count":1}')}}]);

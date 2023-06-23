@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[6325],{7525:e=>{e.exports=JSON.parse('{"label":"Containers-as-a-Service","permalink":"/blog/tags/containers-as-a-service","allTagsPath":"/blog/tags","count":1}')}}]);
