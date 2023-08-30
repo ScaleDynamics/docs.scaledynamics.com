@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-  <ShortName>ScaleDynamics CaaS documentation</ShortName>
-  <Description>Search ScaleDynamics CaaS documentation</Description>
+  <ShortName>ScaleDynamics documentation</ShortName>
+  <Description>Search ScaleDynamics documentation</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">https://docs.scaledynamics.com/img/favicon.png</Image>
   <Url type="text/html" method="get" template="https://docs.scaledynamics.com/search?q={searchTerms}"/>
